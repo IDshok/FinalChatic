@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Client</class>
+ <widget class="QMainWindow" name="Client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>452</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>452</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 68, 69);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textInput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>316</y>
+      <width>295</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #a2a2a2;
+padding: 7px;
+border-radius: 5px;
+color: #f2f2f2;</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Введите сообщение...</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textMessage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>295</width>
+      <height>245</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit{
+background-color: #a4a4a4;
+padding: 7px;
+border-radius: 6px;
+color: #f2f2f2;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDiscon">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>60</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Нажмите &lt;b&gt;Shift+Esc&lt;/b&gt;, чтобы покинуть чат</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btnDiscon{
+background-color: #767778;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #858687;
+border-style: solid;
+color: #f2f2f2;
+}
+QPushButton#btnDiscon:hover{
+background-color: #878889;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #a9aaab;
+border-style: solid;
+color: #ffffff;
+}
+QPushButton#btnDiscon:pressed{
+background-color: #575859;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #878889;
+border-style: solid;
+color: #efefef;
+}</string>
+    </property>
+    <property name="text">
+     <string>Отключение</string>
+    </property>
+    <property name="shortcut">
+     <string>Shift+Esc</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="listUsers">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>100</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Список присоединённых пользователей</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #767778;
+selection-background-color: rgb(222, 222, 222);
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #858687;
+border-style: solid;
+color: #f2f2f2;</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rBtnEncrypt">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>395</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f2f2f2;</string>
+    </property>
+    <property name="text">
+     <string>Вкл. для шифровки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEnter">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>330</y>
+      <width>93</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;b&gt;Ctrl+Enter&lt;/b&gt; - для отправки сообщения</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btnEnter{
+background-color: #767778;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #858687;
+border-style: solid;
+color: #f2f2f2;
+}
+QPushButton#btnEnter:hover{
+background-color: #878889;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #a9aaab;
+border-style: solid;
+color: #ffffff;
+}
+QPushButton#btnEnter:pressed{
+background-color: #575859;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #878889;
+border-style: solid;
+color: #efefef;
+}</string>
+    </property>
+    <property name="text">
+     <string>Отправить</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+Return</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnConnection">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Нажмите &lt;b&gt;Shift+Enter&lt;/b&gt;, чтобы присоединиться к чату</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btnConnection{
+background-color: #767778;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #858687;
+border-style: solid;
+color: #f2f2f2;
+}
+QPushButton#btnConnection:hover{
+background-color: #878889;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #a9aaab;
+border-style: solid;
+color: #ffffff;
+}
+QPushButton#btnConnection:pressed{
+background-color: #575859;
+padding: 5px;
+border-radius: 5px;
+border-width: 2px;
+border-color: #878889;
+border-style: solid;
+color: #efefef;
+}</string>
+    </property>
+    <property name="text">
+     <string>Подключение</string>
+    </property>
+    <property name="shortcut">
+     <string>Shift+Return</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="nmOfUser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>135</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f2f2f2;</string>
+    </property>
+    <property name="text">
+     <string>&lt;b&gt;Имя пользователя&lt;/b&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineUser">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>155</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #a2a2a2;
+padding: 7px;
+border-radius: 5px;
+color: white;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Введите имя...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineKey">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>221</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Поле для ключа шифрования</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #a2a2a2;
+padding: 7px;
+border-radius: 5px;
+color: #f2f2f2;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Введите ключ...</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>452</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #f2f2f2;
+font-weight: bold;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
